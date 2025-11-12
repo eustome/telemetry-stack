@@ -1,9 +1,6 @@
-# telemetry-stack
-Windows telemetry agent with db and dashboard. C# agent -> python FastApi -> sqlite -> react dashboard. HMAC validation + disk queue + docker compose + start.bat
-
-
 # telemetry pipeline 
 windows agent which collects telemetry data(basic sys metrics e.g cpu% and memory usage) sends it to FastApi backend, which persist events to SQLite and publishes it on react dashboard on localhost
+C# agent -> python FastApi -> sqlite -> react dashboard. HMAC validation + disk queue + docker compose + start.bat
 ## stack
 agent: .net 4.72 console app (eu/ConsoleApp2)
 back: FastAPI + SQLite + websocket broadcast (backend)
