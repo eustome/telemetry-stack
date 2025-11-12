@@ -107,8 +107,9 @@ hmac load bursts
 - eu/ConsoleApp2/     windows agent
 - tools/load_emitter.py     stress test
 - docker-compose.yml    docker
-- launch.bat      fast launch
+- start.bat      fast launch
 - README.md
+
 
 
 
