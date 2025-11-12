@@ -101,12 +101,13 @@ python tools/load_emitter.py --rate 150
 hmac load bursts
 
 ## layout
-backend/      fastapi app and sqlite db
-pytest        test
-frontend/     front(react)
-eu/ConsoleApp2/     windows agent
-tools/load_emitter.py     stress test
-docker-compose.yml    docker
-launch.bat      fast launch
-README.md
+- backend/      fastapi app and sqlite db
+- pytest        test
+- frontend/     front(react)
+- eu/ConsoleApp2/     windows agent
+- tools/load_emitter.py     stress test
+- docker-compose.yml    docker
+- launch.bat      fast launch
+- README.md
+
 
