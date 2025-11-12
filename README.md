@@ -13,17 +13,17 @@ lanunch start.bat to automaticly install requirements and launch both: frontend 
 ### backend
 manual start: 
 
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r backend/requirements.txt
-uvicorn backend.main:app --reload
+- python -m venv .venv
+- .venv\Scripts\activate
+- pip install -r backend/requirements.txt
+- uvicorn backend.main:app --reload
 
 env options:
-API_TOKEN (current token)
-HMAC_SECRET (current hmac-secret)
-HMAC_DRIFT (current 30s allowed (diff from req timestamp and backend time))
-HMAC_REPLAY_TTL (caching HMAC (currently 120s))
-DB_PATH (opt custom sqlite path)
+- API_TOKEN (current token)
+- HMAC_SECRET (current hmac-secret)
+- HMAC_DRIFT (current 30s allowed (diff from req timestamp and backend time))
+- HMAC_REPLAY_TTL (caching HMAC (currently 120s))
+- DB_PATH (opt custom sqlite path)
 
 ### frontend
 manual start :
@@ -39,12 +39,12 @@ To use funcs that require authentification (clear) u need to provide token VITE_
 build eu/ConsoleApp2.sln
 
 run .exe, override if u want:
-API_URL (http://localhost:8000)
-API_TOKEN (token)
-HMAC_SECRET (hmac-secret)
-AGENT_ID (system user name)
-INTERVAL_SECONDS (default 5, tick interval)
-QUEUE_PATH (path where agent saves failure batchs)
+- API_URL (http://localhost:8000)
+- API_TOKEN (token)
+- HMAC_SECRET (hmac-secret)
+- AGENT_ID (system user name)
+- INTERVAL_SECONDS (default 5, tick interval)
+- QUEUE_PATH (path where agent saves failure batchs)
 
 agent signs requests with HMAC, fails are queued on disk and retried on next tick
 
@@ -109,5 +109,6 @@ hmac load bursts
 - docker-compose.yml    docker
 - launch.bat      fast launch
 - README.md
+
 
 
