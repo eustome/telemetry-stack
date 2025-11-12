@@ -26,10 +26,10 @@ env options:
 - DB_PATH (opt custom sqlite path)
 
 ### frontend
-manual start :
-cd frontend
-npm install
-npm run dev
+manual start:
+- cd frontend
+- npm install
+- npm run dev
 
 link in VITE_API_BASE_URL
 (default http://localhost:8000).
@@ -109,6 +109,7 @@ hmac load bursts
 - docker-compose.yml    docker
 - launch.bat      fast launch
 - README.md
+
 
 
 
