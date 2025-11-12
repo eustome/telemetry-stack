@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    environment:
+      API_TOKEN: "${API_TOKEN:-telemetry-secret-token}"
+      HMAC_SECRET: "${HMAC_SECRET:-telemetry-hmac-secret}"
+      DB_PATH: /data/telemetry.db
+    volumes:
+      - backend-data:/data
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: "${VITE_API_BASE_URL:-http://backend:8000}"
+    ports:
+      - "1337:80"
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:
+
